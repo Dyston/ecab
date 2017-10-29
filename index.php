@@ -12,6 +12,12 @@ $b= pi();
 //unset($b);
 //echo 'type of $a is ',gettype($a);
 //if (isset($b)) {echo '<br>$b is create, $b=',$b;}else{echo'<br>$b is not create';};
+//if (!isset($_GET['send'])){
+//    echo file_get_contents('form.php');
+//    die();
+//}
+
+
 echo $b;
 echo '<br>';
 $link_on_b = &$b;
@@ -33,3 +39,9 @@ for ($i=0;$i< iconv_strlen($dir);$i++)
 echo $dir[$i],'<br>';
     }
 }
+
+$name = $_GET['name'];
+echo '<br> Hello ',$name;
+echo ' you IP is ', getenv("REMOTE_ADDR");
+echo "<br> you browser is ". getenv(HTTP_USER_AGENT);
+//header("Location: https://www.google.com.ua");
